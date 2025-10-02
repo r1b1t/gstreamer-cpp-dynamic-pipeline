@@ -4,7 +4,7 @@
         {
             "label": "build with g++",
             "type": "shell",
-            "command": "C:/msys64/mingw64/bin/g++.exe -Wall -Wextra -g \"${file}\" -o \"${fileDirname}/output/${fileBasenameNoExtension}.exe\" $(pkg-config --cflags --libs gstreamer-1.0 gstreamer-rtsp-server-1.0)",
+            "command": "C:/msys64/mingw64/bin/g++.exe -Wall -Wextra -g main.cpp src/MyFactory.cpp src/CreatePipeline.cpp -Iinclude -o \"${fileDirname}/output/${fileBasenameNoExtension}.exe\" $(pkg-config --cflags --libs gstreamer-1.0 gstreamer-rtsp-server-1.0)",
             "options": {
                 "cwd": "${fileDirname}",
                 "shell": {
